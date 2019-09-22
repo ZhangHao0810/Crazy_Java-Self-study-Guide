@@ -1,4 +1,4 @@
-package 集合框架类Test.Collection.Set.TreeSet;
+package 集合框架类Test.Collection.Set.SortedSet接口.TreeSet;
 
 /**
  * @Auther： ZhangHao

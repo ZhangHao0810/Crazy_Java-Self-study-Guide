@@ -1,0 +1,34 @@
+HashMap和Hashtable都是Map接口的典型实现类,它们之间的关系完全类似于ArrayList和Vector的关系:
+Hashtable是一个古老的Map实现类,它从JDK 1.0起就已经出现了,当它出现时, Java还没有提供Map接口,所以它包含了两个烦琐的方法,
+即elements) (类似于Map接口定义的values)方法)和keys) (类似于Map接口定义的keySet()方法),现在很少使用这两个方法
+Java 8改进了HashMap的实现,使用HashMap存在key冲突时依然具有较好的性能。
+除此之外, Hashtable和HashMap存在两点典型区别。
+> Hashtable是一个线程安全的Map实现,但HashMap是线程不安全的实现,所以HashMap比 Hashtable的性能高一点;
+但如果有多个线程访问同一个Map对象时,使用Hashtable实现类会更好。
+Hashtable不允许使用null作为key和value,如果试图把null值放进Hashtable中,将会引发 ullPointerException异常;
+但HashMap可以使用null作为key或value.
+
+从Hashtable的类名上就可以看出它是一个古老的类,它的命名甚至没有遵守Java的命名规范:每个单词的首字母都应该大写。
+也许当初开发Hashtable的工程师也没有注意到这一点,后来大量Java程序中使用了Hashtable类,所以这个类名也就不能改为 HashTable 了,
+否则将导致大量程序需要改写。
+与Vector类似的是,尽量少用Hashtable实现类,即使需要创建线程安全的Map实现类,也无须使用Hashtable实现类,
+可以通过后面介绍的Collections工具类把HashMap变成线程安全的。
+
+
+为了成功地在HashMap, Hashtable中存储、获取对象,用作key的对象必须实现hashCode()方法和equals()方法。
+与HashSet集合不能保证元素的顺序一样, HashMap,Hashtable也不能保证其中key-value对的顺序。
+类似于HashSet, HashMap、 Hashtable判断两个key相等的标准也是:
+两个key通过equals0)方法比较返回true,两个key的hashCode值也相等。
+
+除此之外, HashMap, Hashtable中还包含一个containsValue()方法,用于判断是否包含指定的value.
+那么HashMap, Hashtable如何判断两个value相等呢?
+HashMap, Hashtable判断两个value相等的标准更简单:只要两个对象通过equals()方法比较返回true即可。
+
+当使用自定义类作为HashMap.Hashtable的key时,如果重写该类的equals(Object obj)和hashCode)方法,
+则应该保证两个方法的判断标准一致-当两个key通过equals()方 ,法比较返回true时,两个key的hashCode)返回值也应该相同。
+
+因为HashMap. Hashtable保存key的方式与HashSet保存集合元素的方式完全相同,
+所以HashMap. Hashtable对 key的要求与HashSet对集合元素的要求完全相同。
+
+与HashSet类似的是,尽量不要使用可变对象作为HashMap, Hashtable的key,
+如果确实需要使用可变对象作为HashMap. Hashtable的key,则尽量不要在程序中修改作为key的可变对象。

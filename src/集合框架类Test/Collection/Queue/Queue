@@ -1,0 +1,23 @@
+模拟队列结构，  先进先出的容器。
+
+头存放时间最长。 访问元素会返回头部。通常不允许随机访问队列的元素。
+
+Queue接口有一个PriorityQueue实现类。
+除此之外, Queue还有一个 Deque接口, Deque代表一个 “双端队列”,双端队列可以同时从两端来添加、删除元素,
+因此Deque的实现类既可当成队列使用,也可当成栈使用。
+Java为Deque提供了ArrayDeque和LinkedList两个实现类。
+
+
+Queue接口中定义了如下几个方法。
+void add(Object e):将指定元素加入此队列的尾部。
+Object element():获取队列头部的元素,但是不删除该元素。
+boolean offer(Object e):将指定元素加入此队列的尾部。当使用有容量限制的队列时,此方法通常比add(Object e)方法更好。
+Object peek):获取队列头部的元素,但是不删除该元素。如果此队列为空,则返回null.
+Object poll):获取队列头部的元素,并删除该元素。如果此队列为空,则返回null.
+Dbject remove():获取队列头部的元素,并删除该元素。
+
+Deque是Queue的子接口，代表双端队列。可以删除末尾，可以插入到开头。 removeLast addFirst
+    提供类似栈的操作，pop（）删除开头，push（）添加开头。 和自带的removeFirst，addFirst相同。
+
+    所以只要实现了Deuqe双端队列接口，就可以当做队列 也当做栈来使用。
+

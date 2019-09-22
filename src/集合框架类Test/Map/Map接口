@@ -2,3 +2,36 @@ Map 里的数据都是Key-value对。
     key不可重复，key用于标识集合里的每项数据。
 
 Map也像一个罐子，但是里面的每项数据都由两个值组成。
+
+    Map中有两组值，key和Value  把Map中的所有Key提取出来就是一个Set，而且key集的存储形式和Set很像。
+    Map子类和Set子类的名字上面也惊人相似。key集的储存方式和对应的Set集合中元素的存储方式完全相同。
+
+ Set与Map之间的关系非常密切。
+ 虽然Map中放的元素是key-value对, Set集合中放的元素是单个对象,
+ 但如果把key-value对中的value当成key的附庸: key在哪里, value就跟在哪里。 这样就可以像对待Set一样来对待Map了。
+ 事实上, Map提供了一个Entry内部类来封装key-value对,而计算Entry存储时则只考虑Entry封装的key.
+ 从Java源码来看, Java是先实现了Map,然后通过包装一个所有value都为null的Map就实现了Set集合。
+
+ 如果把Map里的所有value放在一起来看,它们又非常类似于一个List:
+ 元素与元素之间可以重复,每个元素可以根据索引来查找,只是Map中的索引不再使用整数值,而是以另一个对象作为索引。
+ 如果需要从List集合中取出元素,则需要提供该元素的数字索引;如果需要从Map中取出元素,则需要提供该元素的key索引。
+ 因此, Map有时也被称为字典,或关联数组
+
+
+
+
+
+
+
+
+ >> 各Map实现类的性能分析
+ 对于Map的常用实现类而言,虽然HashMap和Hashtable的实现机制几乎一样,但由于Hashtable是一个古老的、线程安全的集合, 因此HashMap通常比Hashtable要快。
+ TreeMap通常比HashMap, Hashtable要慢(尤其在插入、删除key-value对时更慢),因为TreeMap底层采用红黑树来管理key-value对(红黑树的每个节点就是一个key-value对)
+ 使用TreeMap有一个好处: TreeMap中的key-value对总是处于有序状态,无须专门进行排序操作。
+ 当TreeMap被填充之后,就可以调用keySet(),取得由key组成的Set,然后使用toArray()方法生成key的数组,
+ 接下来使用Arrays的binarySearch()方法在已排序的数组中快速地查询对象。
+ 对于一般的应用场景,程序应该多考虑使用HashMap,因为HashMap正是为快速查询设计的 (HashMap底层其实也是采用数组来存储key-value对),
+ 但如果程序需要一个总是排好序的Map时,则可以考虑使用TreeMap
+ LinkedHashMap比HashMap慢一点,因为它需要维护链表来保持Map中key-value时的添加顺序
+ dentityHashMap性能没有特别出色之处,因为它采用与HashMap基本相似的实现,只是它使用=而不是equals()方法来判断元素相等。
+ EnumMap的性能最好,但它只能使用同一个枚举类的枚举值作为key

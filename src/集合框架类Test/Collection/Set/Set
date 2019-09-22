@@ -1,0 +1,23 @@
+Set是个罐子，他本质上是个collection，只是行为有所不同，Set不予许包含重复元素。
+    Set不能记住元素顺序，所以元素不能重复，否则无法准确识别这个元素。
+
+    注意，set不保证有序，也没说一定无序。 所以说可能有序也可能无序。不要认为Set一定无序。
+    Set底层是用Map来实现的！！！用key保证其唯一。
+
+
+
+    HashSet的性能总比TreeSet好，特别是添加查询等操作
+    因为TreeSet需要红黑树算法来维护集合元素的次序。
+    当需要一个保持排序的set时，才应该使用TreeSet，否则都应该使用HashSet。
+
+    想要元素唯一，但不是键值对的形式，就用Set。
+
+
+    当需要遍历HashSet时，用LinkedHashSet会更快。但是插入删除会稍慢一些，因为要维护链表。
+
+    EnumSet是所有Set中性能最好的。但是只能保存同一个枚举类的枚举值作为集合元素。
+
+    【注意，Set的三个实现类都是线程不安全的，如果有多个线程同时修改Set，必须手动保持set集合的同步性。
+        通常用Collection工具类的synchronizeSortedSet 方法来包装该Set集合。在创建Set集合时进行。
+
+        SortedSet s = Collection.synchronizedSortedSet(new TreeSet(.....));
