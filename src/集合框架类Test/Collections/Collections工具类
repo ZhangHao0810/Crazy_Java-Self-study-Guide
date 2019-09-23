@@ -1,0 +1,11 @@
+Colletions提供了如下常用的类方法用于对List集合元素进行排序。
+
+void reverse(List list):反转指定List集合中元素的顺序。
+void shuffle(List list):对List集合元素进行随机排序(shuffle方法模拟了“洗牌”动作)。
+void sort(List list):根据元素的自然顺序对指定List集合的元素按升序进行排序。
+void sort(List list, Comparator c):根据指定Comparator产生的顺序对List集合元素进行排序。
+void swap(List list, int i, int j):将指定List集合中的i处元素和j处元素进行交换。
+void rotate(List list, int distance):
+    当distance为正数时,将list集合的后distance个元素“整体”移到前面;
+    当distance为负数时,将list集合的前distance个元素“整体”移到后面。
+    该方法不会改变集合的长度。

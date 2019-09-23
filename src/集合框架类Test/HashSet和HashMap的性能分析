@@ -1,0 +1,29 @@
+对于HashSet及其子类而言,它们采用hash算法来决定集合中元素的存储位置,并通过hash算法来控制集合的大小;
+对于HashMap, Hashtable及其子类而言,它们采用hash算法来决定Map中key的存储,并通过hash算法来增加key集合的大小。
+
+hash表里可以存储元素的位置被称为“桶(bucket)",在通常情况下,单个“桶”里存储一个元素,此时有最好的性能:
+hash算法可以根据hashCode值计算出“桶”的存储位置,接着从“桶”中取出元素。
+但hash表的状态是open的:在发生"hash冲突”的情况下,单个桶会存储多个元素,这些元素以链表形式存储,必须按顺序搜索。
+
+因为HashSet和HashMap,Hashtable都使用hash算法来决定其元素(HashMap则只考虑key)的存储,因此HashSet. HashMap的hash表包含如下属性。
+容量(capacity): hash表中桶的数量。
+初始化容量(initial capacity):创建hash表时桶的数量。
+HashMap和HashSet都允许在构造器中指定初始化容量。
+尺寸(size):当前hash表中记录的数量。
+负载因子(load factor):负载因子等于"size/capacity",负载因子为0,表示空的hash表, 0.5表示半满的hash表,依此类推。
+轻负载的hash表具有冲突少、适宜插入与查询的特点(但是使用Iterator迭代元素时比较慢)。
+
+除此之外, hash表里还有一个“负载极限”, “负载极限”是一个0-1的数值, "负载极限" hash表的最大填满程度。
+当hash表中的负载因子达到指定的“负载极限”时,
+hash表会自动成倍地增加容量(桶的数量),并将原有的对象重新分配,放入新的桶内,这称为rehashing。
+
+HashSet和HashMap、 Hashtable的构造器允许指定一个负载极限, HashSet和HashMap,Hashtable默认的“负载极限”为0.75,
+这表明当该hash表的3/4已经被填满时, hash表会发生rehashing。
+“负载极限”的默认值(0.75)是时间和空间成本上的一种折中:
+较高的“负载极限”可以降低hash表所占用的内存空间,但会增加查询数据的时间开销,
+而查询是最频繁的操作(HashMap的get0)与put0)方法都要用到查询);
+较低的“负载极限”会提高查询数据的性能,但会增加hash表所占用的内存开销。
+程序员可以根据实际情况来调整HashSet和HashMap的“负载极限”值。
+如果开始就知道HashSet和HashMap,Hashtable会保存很多记录,则可以在创建时就使用较大的初始化容量,
+如果初始化容量始终大于HashSet和HashMap、Hashtable所包含的最大记录数除以“负载极限”,就不会发生rehashing。
+使用足够大的初始化容量创建HashSet和HashMap, Hashtable时,可以更高设置太高可能会浪费空间,因此通常不要将初始化容量设置得过高。

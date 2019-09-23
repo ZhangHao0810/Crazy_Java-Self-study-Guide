@@ -13,7 +13,7 @@ public class LinkedHashSet_Test {
     public static void main(String[] args) {
         LinkedHashSet books = new LinkedHashSet();
          books.add("疯狂张浩");
-         books.add("This is a test");
+         books.add("This is a Test");
         System.out.println(books);
 
         books.remove("疯狂张浩");
