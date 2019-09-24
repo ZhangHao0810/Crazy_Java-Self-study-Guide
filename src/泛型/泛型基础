@@ -1,0 +1,30 @@
+<>
+
+<E> E是一个类型，可以在程序中使用。 void add(E e);
+
+<E , V> 两个类型形参，形参名 E V
+public interface Map <K, V>{
+    Set <K> keySet(){....}          //keySet（）的返回值是Set<K>类型的
+    V put(K key,V value){.....}     //put() 返回值是 V 类型的。
+}
+
+Set<K> 是一种特殊的Set，是只能存放K类型的Set。
+
+
+【不存在泛型类，；不管为泛型的类型形参传入了哪一类型，对于Java 依然被当成同一个类来处理。在内存中也只占用一块内存空间。
+    所以在静态方法，静态初始化块，或者静态变量的声明和初始化中不允许使用类型形参。
+
+    instanceof 运算符后面不能使用泛型。
+    instanceof 判断左边是不是右边类的实例。
+
+    (c instanceof Java.util.ArrayList<String>)  错误！
+】
+
+
+List<String>类并不是List<Object>类的子类。
+
+<?> 代表元素类型可以匹配任意类型。
+<? extends Shape> ？ 代表未知类型，但这个未知类型一定是Shap的子类，也可以是Shap本身。
+Shap即通配符? 的上限
+与类同时继承父类，实现接口类似，为类型形参指定多个上限时，所有的接口上限必须位于类上限后面（右面）。
+

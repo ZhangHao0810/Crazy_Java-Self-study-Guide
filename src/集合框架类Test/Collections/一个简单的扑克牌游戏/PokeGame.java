@@ -99,12 +99,17 @@ public class PokeGame {
      *
      * @param first	首先得牌的玩家。
      * @return void
-     * @Description: 发牌，要指定最先发给谁
+     * @Description: 发牌，从牌库中依次发牌。先发给参数玩家后面的玩家，再发给前面的玩家。
+     * 发牌功能不完善，每次只能发给一个人一张牌，应该一次性发完。
+     *
     */
     public void deliverCard(String first){
 
         int firstPos = ArrayUtils.search(players,first);
 
+        /**
+         * @Description:  给参数之后的玩家发牌。
+        */
         for (int i =firstPos;i<Play_Num;i++){
             if (players[i]!=null){
                 playersCards[i].add(cards.get(0));
@@ -112,6 +117,9 @@ public class PokeGame {
             }
         }
 
+        /**
+         * @Description:  给参数玩家之前的玩家发牌。
+        */
         for (int i=0;i<firstPos;i++){
             if (players[i] != null) {
                 playersCards[i].add(cards.get(0));
@@ -120,6 +128,14 @@ public class PokeGame {
         }
     }
 
+    /**
+     * @author Zhanghao
+     * @date 2019/9/24 20:40
+     *
+     * @param
+     * @return void
+     * @Description: 用来展示此刻选手的手牌。仅限于展示作用。
+    */
     public void showPlayerCards(){
         for ( int i=0;i<Play_Num; i++){
             if (players[i] != null){
@@ -133,6 +149,11 @@ public class PokeGame {
 
     }
 
+    /**
+     * @Description:    当前的功能为：发牌。
+     * @Author:         ZhangHao
+     * @CreateDate:     2019/9/24 20:39
+    */
     public static void main(String[] args) {
         PokeGame pokeGame = new PokeGame();
 
@@ -146,7 +167,11 @@ public class PokeGame {
         pokeGame.deliverCard("人民币玩家");//这里如果能把玩家设置成枚举类型就好了，待完善。
         pokeGame.showPlayerCards();
 
-
+/**
+ * 发牌程序还不完善
+ *
+ * 还需要增加很多需求。以满足扑克牌游戏的规则
+*/
 
         pokeGame.deliverCard("普通玩家");
         pokeGame.showPlayerCards();
