@@ -25,13 +25,13 @@ public class Properties_Test {
             props.setProperty("Usetname","Zhanghao");
             props.setProperty("PassWord","123456");
 //保存文件
-            props.store(new FileOutputStream("a.ini"),"comment line");
+            props.store(new FileOutputStream("PropertiesTest.ini"),"comment line");
 
             Properties props2 = new Properties();
 //添加属性到另一个properties
             props2.setProperty("Gender","male");
 //追加文件
-            props2.load(new FileInputStream("a.ini") );
+            props2.load(new FileInputStream("PropertiesTest.ini") );
             System.out.println(props2);
 
 

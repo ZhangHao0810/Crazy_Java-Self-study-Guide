@@ -1,0 +1,57 @@
+try {} catch{} 花括号不可省略。
+    try内声明的变量是局部变量，不能在catch块中访问。
+
+    Throwable
+    |
+    |----Error
+    |        |------AWTError，IOError，LinkageError，ThreadError
+    |
+    |
+    |----Exception
+             |------RuntimeException，SQLException，IOException，
+                          |
+                          |
+                          |------IndexOutOfBoundsException，NullPointerException，ClassCastException
+
+
+Error错误,
+一般是指与虚拟机相关的问题,如系统崩溃、虚拟机错误、动态链接失败等,
+这种错误无法恢复或不可能捕获,将导致应用程序中断。通常应用程序无法处理这些错误,因此应用程序不应该试图使用catch块来捕获Error对象。
+在定义该方法时,也无须在其throws子句中声明该方法可能抛出Error及其任何子类。
+
+
+异常捕获的时候，一定记住要先捕获小异常，再捕获大异常。否则后捕获的小异常将没有执行的机会。
+
+一个catch代码块可以同时捕获多个异常  用|隔开。捕获【多种】异常的时候，异常变量使用隐式的final修饰。不可改变。
+    可以通过异常形参活得异常对象的相关信息。
+    所有的异常对象都包含了如下几个常用方法。
+    getMessage():返回该异常的详细描述字符串。
+    printStackTrace():将该异常的跟踪栈信息输出到标准错误输出。*****常用****
+    printStackTrace(PrintStream s):将该异常的跟踪栈信息输出到指定输出流。
+    getStackTrace():返回该异常的跟踪栈信息。、
+
+
+
+Java的垃圾回收机制不会回收任何的物理资源，只能回收堆内存中的对象所占用的内存。
+    通过finally来回收try块中打开的物理资源。
+        只要有finally块，不管之前怎么执行，最终都要执行finally块。即使之前代码块有return。
+        如果在try-catch块中调用了退出虚拟机的方法  System.exit(1) finally块将永远失去执行机会。
+
+try-catch-finally。  try是必须的，catch和finall是可选的。
+
+
+    当程序运行到return 和 throw时，会立即检测是否有finally块，若有会立即执行finally块中的内容，再返回执行return和throw，
+        若finally块中出现了 return和throw ，方法则会终止。原有程序中的 return和throw语句将会失效。
+
+      代码调用了有throws的方法，必须也要throws交由他人处理或者try-catch捕获并处理。
+
+        子类方法重写的时候跑出的异常要是父类的同类或者是子类。声明抛出的异常不允许比父类方法声明抛出的异常多。
+
+throws是自动抛出未知异常。
+      用throw 是主动抛出异常。抛出的不是异常类，而是实例。每次只抛出一个异常实例。
+      程序会跳到对应的catch块中。
+
+
+ 可以把throw放到catch块中，打印异常的跟踪栈信息，接着抛出异常，通知方法的调用者处理抛出的异常。
+
+
