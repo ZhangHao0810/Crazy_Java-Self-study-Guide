@@ -1,4 +1,4 @@
-package MySQL数据库和JDBC编程;
+package MySQL数据库和JDBC编程.Execute;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,35 +18,35 @@ public class ExecuteDML {
     private String user;
     private String password;
 
-
     public void initParam(String paramFile) throws IOException {
-        Properties props= new Properties();
+        Properties props = new Properties();
         props.load(new FileInputStream(paramFile));
-        driver=props.getProperty("driver");
-        url=props.getProperty("url");
-        user=props.getProperty("user");
-        password=props.getProperty("password");
+
+        driver = props.getProperty("driver");
+        url = props.getProperty("url");
+        user = props.getProperty("user");
+        password = props.getProperty("password");
 
     }
+
     public int insertData(String sql) throws Exception {
         Class.forName(driver);
 
-        try(
-            Connection conn = DriverManager.getConnection(url,user,password);
-            Statement stmt=conn.createStatement();
+        try (
+                Connection conn = DriverManager.getConnection(url, user, password);
+                Statement stmt = conn.createStatement();
         ) {
             return stmt.executeUpdate(sql);
         }
     }
 
     public static void main(String[] args) throws Exception {
-        ExecuteDML ed=new ExecuteDML();
+        ExecuteDML ed = new ExecuteDML();
         ed.initParam("mysql.ini");
         int data = ed.insertData("insert into jdbc_test"
                 + " select *  from stu ");
-        System.out.println("--系统中有"+data+"条记录受影响");
+        System.out.println("--系统中有" + data + "条记录受影响");
 
     }
-
 
 }
