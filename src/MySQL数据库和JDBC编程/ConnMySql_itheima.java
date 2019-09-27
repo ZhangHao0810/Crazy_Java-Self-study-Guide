@@ -11,8 +11,8 @@ public class ConnMySql_itheima {
     public static void main(String[] args)  {
 
         try {
-
-            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+//        Class.forName("com.mysql.jdbc.Driver");
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver());//在new Driver（）的时候就已经注册了。所以相当于注册两遍。
 
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/test","root","0206");
 
@@ -29,14 +29,11 @@ public class ConnMySql_itheima {
                 System.out.println("id="+id+"name="+name+"score"+score);
             }
 
-
-
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-//        Class.forName("com.mysql.jdbc.Driver");
+
     }
 
 }

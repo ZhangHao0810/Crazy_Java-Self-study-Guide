@@ -47,6 +47,12 @@ public class ExecuteSQL {
      * @Description:  有点不明白为何  Connection   Statement ResultSet ResultSetMetaData 都他娘的是接口！！
      * 难道都是依赖于DriverManger类来创造实例对象吗。
      * 满屏都是接口，蛮诧异的。
+     *
+     * stm.execute(sql)
+     * @return <code>true</code> if the first result is a <code>ResultSet</code>
+     *         object; <code>false</code> if it is an update count or there are
+     *         no results
+     *
     */
     public void executeSql(String sql) throws Exception {
         Class.forName(driver);
@@ -74,6 +80,10 @@ public class ExecuteSQL {
                 }
             }
             else {
+                if (stm.getUpdateCount()==0){
+                    System.out.println("操作成功");
+                }
+                else
                 System.out.println("该Sql语句影响的记录有"+stm.getUpdateCount()+"条");
             }
 
@@ -99,9 +109,8 @@ public class ExecuteSQL {
         es.executeSql("create table my_test"
                 +"(test_id int auto_increment primary key, "
                 +"test_name varchar(255))");
-        System.out.println("========执行插入数据的DML语句===========");
-        es.executeSql("insert into my_test(test_name) "
-            +"select name from stu");
+        System.out.println("========执行操作数据的DML语句===========");
+        es.executeSql("insert into my_test(test_name) select name from stu where id<100 ");
         System.out.println("=============执行查询数据的查询语句===========");
         es.executeSql("select * from my_test");
 

@@ -30,6 +30,15 @@ public class PreparedStatement_Test {
         password = props.getProperty("password");
         Class.forName(driver);
     }
+
+    /**
+     * @author Zhanghao
+     * @date 2019/9/27 8:55
+     *
+     * @param
+     * @return void
+     * @Description: 用Statement来操作  用来做对照。
+    */
     public void insertUseStatement() throws Exception{
         long start = System.currentTimeMillis();
         try(

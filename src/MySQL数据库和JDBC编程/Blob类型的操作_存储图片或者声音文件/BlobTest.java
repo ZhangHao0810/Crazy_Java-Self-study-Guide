@@ -48,6 +48,12 @@ public class BlobTest {
     //    创建文件过滤器
     ExtensionFileFilter filter = new ExtensionFileFilter();
 
+    /**
+     * @author Zhanghao
+     * @date 2019/9/27 8:53
+
+     * @Description:  静态代码块，类一旦被加载之后，就会执行。
+    */
     static {
         try {
             Properties props = new Properties();
