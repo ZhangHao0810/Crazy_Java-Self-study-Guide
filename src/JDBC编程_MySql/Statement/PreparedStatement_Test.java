@@ -1,4 +1,4 @@
-package MySQL数据库和JDBC编程.Statement;
+package JDBC编程_MySql.Statement;
 
 import java.io.FileInputStream;
 import java.sql.Connection;

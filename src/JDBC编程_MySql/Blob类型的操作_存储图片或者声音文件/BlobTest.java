@@ -1,4 +1,4 @@
-package MySQL数据库和JDBC编程.Blob类型的操作_存储图片或者声音文件;
+package JDBC编程_MySql.Blob类型的操作_存储图片或者声音文件;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;

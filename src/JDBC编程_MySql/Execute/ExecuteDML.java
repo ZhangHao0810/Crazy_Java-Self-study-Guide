@@ -1,4 +1,4 @@
-package MySQL数据库和JDBC编程.Execute;
+package JDBC编程_MySql.Execute;
 
 import java.io.FileInputStream;
 import java.io.IOException;

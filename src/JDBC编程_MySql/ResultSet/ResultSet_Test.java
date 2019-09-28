@@ -1,4 +1,4 @@
-package MySQL数据库和JDBC编程.ResultSet;
+package JDBC编程_MySql.ResultSet;
 
 import java.io.FileInputStream;
 import java.io.IOException;

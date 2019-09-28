@@ -1,4 +1,4 @@
-package MySQL数据库和JDBC编程;
+package JDBC编程_MySql;
 
 import java.sql.*;
 
