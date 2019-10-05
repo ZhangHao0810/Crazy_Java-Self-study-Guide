@@ -1,4 +1,4 @@
-package IO流.FileWriter;
+package IO流.FileReaderWriter;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,6 +7,8 @@ import java.io.IOException;
  * @Auther： ZhangHao
  * @Date： 2019/9/28 20:00
  * @Description： 写数据---输出流--FileWriter
+ *
+ * 输出流会自动创建文件。
  *
  * FileWriter（String fileName）
  *

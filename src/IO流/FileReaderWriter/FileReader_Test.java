@@ -1,4 +1,4 @@
-package IO流.FileReader;
+package IO流.FileReaderWriter;
 
 import java.io.FileReader;
 import java.io.IOException;
