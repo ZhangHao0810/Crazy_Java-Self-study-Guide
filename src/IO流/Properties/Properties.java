@@ -1,8 +1,7 @@
-package 集合框架类Test.Map.HashMap和Hashtable.Properties;
+package IO流.Properties;
 
 import java.io.*;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Set;
 
 /**
@@ -19,7 +18,7 @@ import java.util.Set;
  * *
  * 方法利用了java的IO体系中的基类 InputStream OutputStream
  */
-public class Properties_Test {
+public class Properties {
     public static void main(String[] args) throws IOException {
 
 //        Crazy_java_Method();
@@ -46,7 +45,7 @@ public class Properties_Test {
      *  * 保存properties到文件，将Properties中的key-value对输出到指定的属性文件(以输出流表示)中。
     */
     private static void UseStoreMethod() throws IOException {
-        Properties pro=new Properties();
+        java.util.Properties pro=new java.util.Properties();
 
         pro.setProperty("8888","dn");
         pro.setProperty("9999","wq");
@@ -71,7 +70,7 @@ public class Properties_Test {
      *  把加载到的 key-value对追加到Properties对象里(Properties是Hashtable的子类,它不保证key-value对之间的次序)。
     */
     private static void UseLoadMethod() throws IOException {
-        Properties pro=new Properties();
+        java.util.Properties pro=new java.util.Properties();
 
         FileReader fr=new FileReader("IO/Properties.txt");
 
@@ -84,7 +83,7 @@ public class Properties_Test {
     }
 
     private static void UseListMethod() throws FileNotFoundException {
-        Properties pro=new Properties();
+        java.util.Properties pro=new java.util.Properties();
 
         pro.setProperty("8888","dn");
         pro.setProperty("9999","wq");
@@ -105,7 +104,7 @@ public class Properties_Test {
      * @Description:  使用Map(Hashtable)的特性，来存储properties
     */
     private static void UseHashtableMethod() {
-        Properties prop=new Properties();
+        java.util.Properties prop=new java.util.Properties();
 
         prop.put("11111","张三");
         prop.put("22222","李四");
@@ -138,14 +137,14 @@ public class Properties_Test {
      * @Description:   疯狂讲义中用到的Properties
     */
     private static void Crazy_java_Method() throws IOException {
-        Properties props = new Properties();
+        java.util.Properties props = new java.util.Properties();
 //添加属性
         props.setProperty("Usetname","Zhanghao");
         props.setProperty("PassWord","123456");
 //保存文件
         props.store(new FileOutputStream("PropertiesTest.ini"),"comment line");
 
-        Properties props2 = new Properties();
+        java.util.Properties props2 = new java.util.Properties();
 //添加属性到另一个properties
         props2.setProperty("Gender","male");
 //追加文件或者说加载文件到对象。这个load的参数是字节流。只存到了pro对象中，还没有追加到文件。
