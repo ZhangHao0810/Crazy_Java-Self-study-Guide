@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class FileIn_OutputStream_CopyTest {
     public static void main(String[] args) throws IOException {
-        FileInputStream fis=new FileInputStream("IO/File.txt"); //这里直接用字符串是因为字节流的构造应该输入的是File对象，但是输入字符串他可以自动new出来这个File对象。
+        FileInputStream fis=new FileInputStream("IO/File.txt"); //这里直接用字符串是因为字节流的构造应该输入的是File对象，但是输入字符串他也可以自动new出来这个File对象。
         FileOutputStream fos=new FileOutputStream("IO/newFile.txt");
 
         byte[] buty=new byte[1024];

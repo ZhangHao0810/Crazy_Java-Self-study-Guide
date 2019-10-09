@@ -6,7 +6,7 @@ import java.io.File;
  * @Auther： ZhangHao
  * @Date： 2019/10/4 10:09
  * @Description：
- *  File 文件和目录路径名的抽象表示形式，File类的实例是不可变得。
+ *  File类是 文件和目录路径名的抽象表示形式，File类的实例是不可变得。
  *
  *      注意不要被File内部的参数所迷惑，到底创建的是文件还是文件夹，要看File对象调用了什么样的方法。
  *
@@ -20,7 +20,7 @@ import java.io.File;
  *      获取文件    File getAbsoluteFile()
  *                  String getAbsolutePath()
  *                  File getName()
- *                  F ile getParent()
+ *                  File getParent()
  *                  File getParentFile()
  *                  ....
  *      判断文件功能 boolean exists()
