@@ -36,9 +36,6 @@ public class MySpring {
     public MySpring() {
     }
 
-    public MySpring(String className) {
-
-    }
 
     public Object getBean(String className){
 //        因为try了之后就没有了。所以要定义一个try外面的变量
@@ -49,7 +46,7 @@ public class MySpring {
         try {
 //            获取传进来参数对应的类映射。
             Class<?> clazz = Class.forName(className);
-//            通过clazz创建对象。
+//            通过clazz创建对象。[通过obj = clazz.newInstance(); 有个很大的弊端，就是只能调用无参的构造来创建对象！！！]
             obj = clazz.newInstance();
 //            在这里做一个自动DI注入，对象中的所有属性值。找寻属性的Set方法来赋值
 //            找到每个不同对象中的Set方法，循环给属性赋值。
