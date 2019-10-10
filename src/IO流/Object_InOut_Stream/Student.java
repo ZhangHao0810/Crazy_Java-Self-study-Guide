@@ -3,7 +3,7 @@ package IO流.Object_InOut_Stream;
 import java.io.Serializable;
 
 /**
- * @Auther： ZhangHao
+ * @author ZhangHao
  * @Date： 2019/10/6 9:03
  * @Description：
  *  当类发生变化，
