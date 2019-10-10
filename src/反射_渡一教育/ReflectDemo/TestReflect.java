@@ -1,4 +1,4 @@
-package 反射_渡一教育.Reflect;
+package 反射_渡一教育.ReflectDemo;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class TestReflect {
              * 通过Class对象来操作Person.class 类文件，与硬盘产生映射关系。找到类文件，赋值给Class对象。
              * 通过字符串来找，容易拼错，要抛出类找不到异常。
              */
-            Class<?> clazz = Class.forName("反射_渡一教育.Reflect.Person");
+            Class<?> clazz = Class.forName("反射_渡一教育.ReflectDemo.Person");
 
             /** 2019/10/9 7:54
              * 获取类的修饰符，（权限，特征）等
@@ -99,7 +99,7 @@ public class TestReflect {
 //        introduction();
 
         try {
-            Class<?> aClass = Class.forName("反射_渡一教育.Reflect.Person");
+            Class<?> aClass = Class.forName("反射_渡一教育.ReflectDemo.Person");
 
             /** 2019/10/9 8:44
              * 通过class 类对象来获取类的属性，赋值给了Field对象。,返回值是Field。抛出NoSuchFieldException

@@ -1,5 +1,5 @@
 try {} catch{} 花括号不可省略。
-    try内声明的变量是局部变量，不能在catch块中访问。
+    try内声明的变量是局部变量，不能在外面和catch块中访问。
 
     Throwable
     |

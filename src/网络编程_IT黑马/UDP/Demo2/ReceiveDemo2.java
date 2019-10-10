@@ -1,4 +1,4 @@
-package 网络编程_IT黑马.UDP;
+package 网络编程_IT黑马.UDP.Demo2;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

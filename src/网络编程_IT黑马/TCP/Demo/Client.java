@@ -1,4 +1,4 @@
-package 网络编程_IT黑马.TCP;
+package 网络编程_IT黑马.TCP.Demo;
 
 import java.io.IOException;
 import java.io.OutputStream;
