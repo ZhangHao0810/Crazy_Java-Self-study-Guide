@@ -23,9 +23,22 @@ Java基础知识学习的过程，也是我熟悉IDEA 熟悉编程规范，熟�
 
 ## 传送门：
 
-### Java入门
+### Java入门( 我的 《Head_First_Java》 笔记 )
+注：此读书笔记仅仅是读书笔记而已。
 
-[【Head_First_Java 笔记】](【笔记】【Head_First_Java】.docx)
+##### [一：Java基本概念](src\HeadFirstJava读书笔记\一：基本概念.md)
+ 
+##### [二：类与对象](二：类与对象.md) 
+
+[三：原始的主数据类型和引用](src\HeadFirstJava读书笔记\三：原始的主数据类型和引用.md)
+[四：方法操作实例变量](src\HeadFirstJava读书笔记\四：方法操作实例变量.md)
+ 
+ D:\DATA\IDEA DATA\Crazy_Java 实例\src\HeadFirstJava读书笔记\五：继承和多态.md
+继承与多态 接口与抽象类（深入多态）
+构造器与垃圾收集器（对象的前世今生） 异常处理
+序列化(serialization)、IO：保存对象 网络与线程 集合与泛型
+
+[下载我的【Head_First_Java 笔记】*进入后点击：view raw* ](【笔记】【Head_First_Java】.docx)
 
 ### 集合框架类
 
