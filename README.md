@@ -1,11 +1,13 @@
-# Crazy_JavaSE 自学教程 (基于实例)
+# Crazy_Java 自学教程 (基于实例)
 
-**本仓库是我为了系统的复习JavaSE 于2019.9 建立的。有意整理成教程，供自己复习和他人学习。**
+**本仓库是我为了系统的复习JavaSE 于2019.9
+建立的。有意整理成教程，供自己复习和他人学习。**
 
 *参考自 《疯狂java讲义》 《Head_First_Java》 以及 IT黑马、渡一教育的部分培训视频*
 
 * **小提示：**
 
+* **====本教程第一部分是《Head_First_Java》阅读笔记，第二部分是实例源代码。**
 * **====知识点是在编写实例的同时记录的，主要以Java源码的形式呈现。**
 
 * **====包含了反射和注解的知识，有利于更好的理解Spring框架的IOC，DI等思想。**
@@ -30,16 +32,24 @@ Java基础知识学习的过程，也是我熟悉IDEA 熟悉编程规范，熟�
  
 ##### [二：类与对象](二：类与对象.md) 
 
-[三：原始的主数据类型和引用](src\HeadFirstJava读书笔记\三：原始的主数据类型和引用.md)
-[四：方法操作实例变量](src\HeadFirstJava读书笔记\四：方法操作实例变量.md)
+##### [三：原始的主数据类型和引用](src\HeadFirstJava读书笔记\三：原始的主数据类型和引用.md)
+##### [四：方法操作实例变量](src\HeadFirstJava读书笔记\四：方法操作实例变量.md)
  
- D:\DATA\IDEA DATA\Crazy_Java 实例\src\HeadFirstJava读书笔记\五：继承和多态.md
-继承与多态 接口与抽象类（深入多态）
-构造器与垃圾收集器（对象的前世今生） 异常处理
-序列化(serialization)、IO：保存对象 网络与线程 集合与泛型
+##### [五：继承和多态](src\HeadFirstJava读书笔记\五：继承和多态.md)
+##### [六：接口与抽象类（深入多态）](src\HeadFirstJava读书笔记\六：接口和抽象类(深入多态).md)
+##### [七：对象的前世今生（构造器与垃圾收集器）](七：对象的前世今生（构造器与垃圾收集器）.md)
+##### [八：异常处理](src\HeadFirstJava读书笔记\八：异常处理.md)
+ 
+##### [九：序列化(serialization)、IO：保存对象](src\HeadFirstJava读书笔记\九：序列化(serialization)、IO：保存对象.md) 
 
-[下载我的【Head_First_Java 笔记】*进入后点击：view raw* ](【笔记】【Head_First_Java】.docx)
+##### [十：网络编程与线程](src\HeadFirstJava读书笔记\十：网络与线程.md)
+##### [十一：集合与泛型](src\HeadFirstJava读书笔记\十一：集合与泛型.md)
 
+#### [下载《Head_First_Java 学习笔记》*进入后点击：view raw* ](【笔记】【Head_First_Java】.docx)
+
+
+---
+### **下面开始结合实例进行系统的学习。**
 ### 集合框架类
 
 #####  Collection（List Queue Set）
@@ -242,7 +252,7 @@ Java基础知识学习的过程，也是我熟悉IDEA 熟悉编程规范，熟�
 
 
 
-#### **暂时结束java se 学习！ 我们 ~~江湖~~ web基础 和 数据库 再见！！**  
+#### **暂时结束java基础 学习！ 我们 ~~江湖~~ web基础 和 数据库 再见！！**  
 
 
 
