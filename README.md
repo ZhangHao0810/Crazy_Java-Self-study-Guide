@@ -54,82 +54,82 @@ Java基础知识学习的过程，也是我熟悉IDEA 熟悉编程规范，熟�
 
 #####  Collection（List Queue Set）
 
-[迭代器Iterator:](src/集合框架类Test/Collection/Iterator_foreach_Test.java)  
+[迭代器Iterator:](src/集合框架类/Collection/Iterator_foreach_Test.java)  
 
 ###### List
     
- [**List接口简介**](src/集合框架类Test/Collection/List/List)   
+ [**List接口简介**](src/集合框架类/Collection/List/List)   
  
- [**ArrayList** ](src/集合框架类Test/Collection/List/List_Test.javat)   
+ [**ArrayList** ](src/集合框架类/Collection/List/List_Test.javat)   
  
- [**ArrayList和Vector**](src/集合框架类Test/Collection/List/ArrayList和Vector/ArrayList和Vector)  
+ [**ArrayList和Vector**](src/集合框架类/Collection/List/ArrayList和Vector/ArrayList和Vector)  
  
- [**LinkedList**](src/集合框架类Test/Collection/List/LinkedList/LinkedList_Test)  
+ [**LinkedList**](src/集合框架类/Collection/List/LinkedList/LinkedList_Test)  
  
- [**LIst_Iterator的使用**](src/集合框架类Test/Collection/List/ListIterator_Test.java)   
- * [**线性表的性能分析**](src/集合框架类Test/Collection/List/线性表的性能分析)  
+ [**LIst_Iterator的使用**](src/集合框架类/Collection/List/ListIterator_Test.java)   
+ * [**线性表的性能分析**](src/集合框架类/Collection/List/线性表的性能分析)  
 
 ###### Queue
 
-[**Queue队列接口简介**](src/集合框架类Test/Collection/Queue/Queue队列)  
-[**Queue的实现类** *PriorityQueue*]( src/集合框架类Test/Collection/Queue/PriorityQueue_Test.java) 
+[**Queue队列接口简介**](src/集合框架类/Collection/Queue/Queue队列)  
+[**Queue的实现类** *PriorityQueue*]( src/集合框架类/Collection/Queue/PriorityQueue_Test.java) 
 
 双端队列：Deque  
-[**Deque模拟数据结构-队列**](src/集合框架类Test/Collection/Queue/Deque/ArrayDeque_Queue_Test.java)  
-[**Deque模拟数据结构-栈**](src/集合框架类Test/Collection/Queue/Deque/ArrayDeque_Stack_Test.java)  
+[**Deque模拟数据结构-队列**](src/集合框架类/Collection/Queue/Deque/ArrayDeque_Queue_Test.java)  
+[**Deque模拟数据结构-栈**](src/集合框架类/Collection/Queue/Deque/ArrayDeque_Stack_Test.java)  
 
 ###### Set
 
-[**Set接口简介** ](src/集合框架类Test/Collection/Set/Set) 
+[**Set接口简介** ](src/集合框架类/Collection/Set/Set) 
 
-[**HashSet** ](src/集合框架类Test/Collection/Set/HashSet/HashSet_Test.java) 
+[**HashSet** ](src/集合框架类/Collection/Set/HashSet/HashSet_Test.java) 
 
-[ **LinkedHashSet** ](src/集合框架类Test/Collection/Set/HashSet/LinkedHashSet/LinkedHashSet_Test.java) 
+[ **LinkedHashSet** ](src/集合框架类/Collection/Set/HashSet/LinkedHashSet/LinkedHashSet_Test.java) 
  
-[**TreeSet**](src/集合框架类Test/Collection/Set/SortedSet接口/TreeSet)  
+[**TreeSet**](src/集合框架类/Collection/Set/SortedSet接口/TreeSet)  
 
-[**EnumSet**](src/集合框架类Test/Collection/Set/EnumSet)  
+[**EnumSet**](src/集合框架类/Collection/Set/EnumSet)  
 
 ##### Map
 
-[Map接口简介](src/集合框架类Test/Map/Map接口)
+[Map接口简介](src/集合框架类/Map/Map接口)
 
- [**HashMap**](src/集合框架类Test/Map/Map_Test.java)
+ [**HashMap**](src/集合框架类/Map/Map_Test.java)
 
-[ **identityHashMap**](src/集合框架类Test/Map/HashMap和Hashtable/IdentityHashM/IdentityHashMap_Test.java) 
+[ **identityHashMap**](src/集合框架类/Map/HashMap和Hashtable/IdentityHashM/IdentityHashMap_Test.java) 
 
-[**LinkedHashMap** ](src/集合框架类Test/Map/HashMap和Hashtable/LinkedHashMap/LinkedHashMap_Test.java) 
+[**LinkedHashMap** ](src/集合框架类/Map/HashMap和Hashtable/LinkedHashMap/LinkedHashMap_Test.java) 
 
-[**WeakHashMap**](src/集合框架类Test/Map/HashMap和Hashtable/WeakHashMap/WeakHashMap_Test.java) 
+[**WeakHashMap**](src/集合框架类/Map/HashMap和Hashtable/WeakHashMap/WeakHashMap_Test.java) 
 
-[**什么是Hashtable，HashMap和Hashtable的区别** ](src/集合框架类Test/Map/HashMap和Hashtable/HashMap和Hashtable) 
+[**什么是Hashtable，HashMap和Hashtable的区别** ](src/集合框架类/Map/HashMap和Hashtable/HashMap和Hashtable) 
 
-[**Properties** *Hashtable的子类*](src/集合框架类Test/Map/HashMap和Hashtable/Properties/Properties_Test.java)
+[**Properties** *Hashtable的子类*](src/集合框架类/Map/HashMap和Hashtable/Properties/Properties_Test.java)
 
- [**TreeMap：** *SortedMap接口实现类*](src/集合框架类Test/Map/SortedMap接口/TreeMap/TreeMap_Test.java)  
+ [**TreeMap：** *SortedMap接口实现类*](src/集合框架类/Map/SortedMap接口/TreeMap/TreeMap_Test.java)  
 
-[**EnumMap**](src/集合框架类Test/Map/EnumMap/EnumMap_Test.java)  
+[**EnumMap**](src/集合框架类/Map/EnumMap/EnumMap_Test.java)  
   
 
 
 ##### Collections工具类
 
-[**collections工具类**](src/集合框架类Test/Collections/Collections工具类) 
+[**collections工具类**](src/集合框架类/Collections/Collections工具类) 
 
-[**简单的扑克游戏**](src/集合框架类Test/Collections/一个简单的扑克牌游戏) 
+[**简单的扑克游戏**](src/集合框架类/Collections/一个简单的扑克牌游戏) 
 
-[**Collections_Search**](src/集合框架类Test/Collections/Collections_SearchTest.java) 
+[**Collections_Search**](src/集合框架类/Collections/Collections_SearchTest.java) 
 
-[**Synchronized**](src/集合框架类Test/Collections/Synchronized_Test.java) 
+[**Synchronized**](src/集合框架类/Collections/Synchronized_Test.java) 
 
 
 ##### 古老的Enumeration类
 
-[**Enumeration**](src/集合框架类Test/古老的Enumeration类/Enumeration)  
+[**Enumeration**](src/集合框架类/古老的Enumeration类/Enumeration)  
 
-[**Enumeration_Test**](src/集合框架类Test/古老的Enumeration类/Enumeration_Test.java)  
+[**Enumeration_Test**](src/集合框架类/古老的Enumeration类/Enumeration_Test.java)  
 
-* [***HashSet和HashMap的性能分析***](src/集合框架类Test/HashSet和HashMap的性能分析) 
+* [***HashSet和HashMap的性能分析***](src/集合框架类/HashSet和HashMap的性能分析) 
 
 
 ### [***单元测试 Junit***](src/单元测试Test)
